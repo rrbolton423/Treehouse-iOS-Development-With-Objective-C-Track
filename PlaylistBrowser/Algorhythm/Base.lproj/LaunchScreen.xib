@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6t-bV-8LI">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="240"/>
+                    <color key="backgroundColor" red="0.1803921568627451" green="0.20392156862745098" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-Fi-FYd">
+                    <rect key="frame" x="0.0" y="240" width="480" height="240"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.14117647058823529" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-rG-hbJ">
+                    <rect key="frame" x="180" y="180" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="XfS-I6-C7o"/>
+                        <constraint firstAttribute="width" constant="120" id="sVR-iI-gh2"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j8H-rG-hbJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0z9-vJ-Dh1"/>
+                <constraint firstItem="t6h-Fi-FYd" firstAttribute="height" secondItem="q6t-bV-8LI" secondAttribute="height" id="F5Y-jp-rf8"/>
+                <constraint firstAttribute="bottom" secondItem="t6h-Fi-FYd" secondAttribute="bottom" id="IUD-gN-aJz"/>
+                <constraint firstItem="t6h-Fi-FYd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K4x-9b-k1J"/>
+                <constraint firstItem="t6h-Fi-FYd" firstAttribute="top" secondItem="q6t-bV-8LI" secondAttribute="bottom" id="Uvd-xm-dUh"/>
+                <constraint firstItem="q6t-bV-8LI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gj0-jn-aPv"/>
+                <constraint firstAttribute="trailing" secondItem="t6h-Fi-FYd" secondAttribute="trailing" id="kTu-rD-9RY"/>
+                <constraint firstAttribute="trailing" secondItem="q6t-bV-8LI" secondAttribute="trailing" id="lTU-31-bum"/>
+                <constraint firstItem="j8H-rG-hbJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vbd-WE-Dmr"/>
+                <constraint firstItem="q6t-bV-8LI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xTO-qj-72K"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="547.5" y="454.22535211267603"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Launch Icon" width="120" height="120"/>
+    </resources>
+</document>
