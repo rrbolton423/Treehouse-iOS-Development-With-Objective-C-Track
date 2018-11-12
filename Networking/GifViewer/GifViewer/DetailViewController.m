@@ -32,10 +32,6 @@
     [self setupGestures];
 }
 
-- (void)dismiss {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)setupGestures {
     
     // Create an instance of UITapGestureRecognizer, which action results in dismissing the currently displayed VC (self)
@@ -46,6 +42,33 @@
     
     // Assign the view that should be looking out for this gesture (The main view)
     [self.view addGestureRecognizer:dismiss];
+    
+    // Create another gesture recognizer
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeToDismiss)];
+    
+    // Set the direction of the gesture to be to the right
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    // Add the gesture to the main view
+    [self.view addGestureRecognizer:swipe];
+}
+
+- (void)dismiss {
+    
+    [UIView animateWithDuration:0.75 animations:^{
+        self.view.transform = CGAffineTransformMakeScale(0.01, 0.01); // Shrink View
+        self.view.alpha = 0.0; // Fade view out
+    } completion:^(BOOL finished) {
+        [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss VC
+    }];
+}
+
+- (void) swipeToDismiss {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.transform = CGAffineTransformMakeTranslation(400, 0); // Move view from left to right
+    } completion:^(BOOL finished) {
+        [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss VC
+    }];
 }
 
 /*
